@@ -1,0 +1,36 @@
+body {
+  background-color: blue;
+  background: url("_105870457_harimau01.jpg");
+  background-position: left top;
+  background-size: 1280px 720px;
+}
+
+h1 {
+  color: rgb(0, 0, 25);
+}
+
+h2 {
+  color: #00ff00;
+}
+
+p {
+  color: hsl(360, 100%, 75%);
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  text-shadow: -4px 4px 4px red;
+  line-height: 50%;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  text-align: center;
+  text-indent: 2rem;
+}
+
+.id {
+  color: rgba(220, 155, 16, 0.6);
+}
+
+#class {
+  color: hsla(240, 79%, 50%, 0.693);
+}
