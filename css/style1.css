@@ -1,6 +1,17 @@
 body {
-  background-color: blue;
-  background: url("_105870457_harimau01.jpg");
+  /* contoh penerapan pewarnaan gradasi */
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+div {
+  width: 1000px;
+  height: 500px;
+  background: url("../_105870457_harimau01.jpg");
   background-position: left top;
   background-size: 1280px 720px;
 }
