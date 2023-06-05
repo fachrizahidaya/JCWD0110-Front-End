@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!-- best practice meletakkan script adalah di bawah tag body -->
+  <script>
+    let obj = [
+      {
+        name: "fathan",
+        age: 23,
+      },
+      {
+        name: "gifari",
+        age: 22,
+      },
+    ];
+    console.log(obj);
+    const checkNumber = () => {
+      let i = 0;
+      while (i < 3) {
+        let value = prompt("Masukkan angka:");
+        if (value % 2 === 0) {
+          // alert("bilangan genap");
+          console.log("bilangan genap");
+        } else {
+          // alert("bilangan ganjil");
+          console.log("bilangan ganjil");
+        }
+        i++;
+      }
+    };
+    checkNumber();
+  </script>
+</html>

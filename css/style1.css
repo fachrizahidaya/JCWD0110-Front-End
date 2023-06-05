@@ -5,17 +5,18 @@ body {
   background-size: 1280px 720px;
 }
 
-h1 {
+/* bisa diletkkan 2 atau lebih jika property dan value CSS yang dibutuhkan sama */
+/* best practice nya adalah menyamakan class/id name nya saja */
+h1,
+h2,
+.id,
+#class {
   color: rgb(0, 0, 25);
-}
-
-h2 {
-  color: #00ff00;
 }
 
 p {
   color: hsl(360, 100%, 75%);
-  font-family: 'Montserrat', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-style: italic;
   text-transform: uppercase;
   text-decoration: line-through;
@@ -31,6 +32,8 @@ p {
   color: rgba(220, 155, 16, 0.6);
 }
 
-#class {
-  color: hsla(240, 79%, 50%, 0.693);
+.konten {
+  background-color: pink;
+  width: 900px;
+  height: 100px;
 }
