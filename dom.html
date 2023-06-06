@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="paragraph">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates,
+      sequi eveniet! Ipsum quos maxime vero voluptas quo consectetur aliquam
+    </p>
+  </body>
+  <script>
+    const paragraf = document.getElementById("paragraph");
+    paragraf.innerHTML = "hello world";
+    console.log(paragraf);
+    const paragrafBaru = document.createElement("p");
+    paragrafBaru.innerText = "Ini paragraf baru";
+    console.log(paragrafBaru);
+    document.body.appendChild(paragrafBaru);
+  </script>
+</html>
