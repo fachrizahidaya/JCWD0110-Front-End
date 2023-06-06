@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Layout</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+      body {
+        padding: 30px;
+      }
+      .main-container {
+        border: 2px solid black;
+        width: 45vw;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .header {
+        background-color: yellow;
+        height: 20%;
+      }
+      .nav {
+        height: 10%;
+        display: flex;
+        gap: 5px;
+      }
+      .nav > div {
+        flex-basis: 33%;
+        background-color: lightgreen;
+      }
+      .center {
+        height: 55%;
+        display: flex;
+        gap: 5px;
+      }
+      #sidebar {
+        background-color: darkgoldenrod;
+        flex-basis: 33%;
+      }
+      #right-content {
+        flex-basis: 67%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      #top-content {
+        background-color: lightblue;
+        flex-basis: 50%;
+      }
+      #bottom-content {
+        flex-basis: 50%;
+        display: flex;
+        gap: 5px;
+      }
+      #bottom-content > div {
+        background-color: fuchsia;
+        flex-basis: 50%;
+      }
+      .footer {
+        background-color: salmon;
+        height: 15%;
+      }
+      .header,
+      #nav-1,
+      #nav-2,
+      #nav-3,
+      #sidebar,
+      #top-content,
+      #content-2,
+      #content-3,
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header">header</div>
+      <div class="nav">
+        <div id="nav-1">nav-1</div>
+        <div id="nav-2">nav-2</div>
+        <div id="nav-3">nav-3</div>
+      </div>
+      <div class="center">
+        <div id="sidebar">sidebar</div>
+        <div id="right-content">
+          <div id="top-content">content-1</div>
+          <div id="bottom-content">
+            <div id="content-2">content-2</div>
+            <div id="content-3">content-3</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
