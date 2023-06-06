@@ -11,7 +11,8 @@ body {
   max-width: 960px;
   /* max-height: 1000px; */
   margin: 0 auto;
-  grid-gap: 10px;
+  /* justify-items:center; */
+  /* grid-gap: 10px; */
 }
 
 #content div {
@@ -30,8 +31,22 @@ body {
 }
 
 .kotak2 {
-  /* bisa menggunakan operator (start/end) */
+  /* bisa ditulis start-end */
   grid-column: 4/10;
+}
+
+.kotak3 {
+  grid-column: 1/5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.kotak4 {
+  grid-column: 5/8;
+}
+
+.kotak5 {
+  grid-column: 8/10;
 }
 
 /* #content div:first-line {
