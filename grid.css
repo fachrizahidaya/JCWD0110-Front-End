@@ -1,0 +1,39 @@
+body {
+  color: white;
+  text-align: center;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* grid-auto-rows: 150px; */
+  max-width: 960px;
+  /* max-height: 1000px; */
+  margin: 0 auto;
+  grid-gap: 10px;
+}
+
+#content div {
+  background: lightskyblue;
+  padding: 30px;
+}
+/* penerapan pseudo-element nth-child dan first-line */
+#content div:nth-child(even) {
+  background: grey;
+}
+
+.kotak1 {
+  /* bisa ditulis start-end */
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.kotak2 {
+  /* bisa menggunakan operator (start/end) */
+  grid-column: 4/10;
+}
+
+/* #content div:first-line {
+  background: green;
+} */
