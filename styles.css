@@ -1,0 +1,98 @@
+body {
+  display: grid;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.logo-search img {
+  width: 34px;
+  height: 34px;
+  position: relative;
+}
+
+.logo-search input {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  border-radius: 5px;
+  height: 25px;
+  width: 100px;
+  border: 0px;
+  background-color: aqua;
+}
+
+.logo-search input:hover {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  border-radius: 5px;
+  width: 120px;
+  height: 25px;
+  transition: 0.3s;
+  border: 0px none;
+  accent-color: yellow;
+  background-color: aqua;
+}
+
+.user img {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.user figure {
+  margin: 0;
+  position: relative;
+  right: 300px;
+}
+
+.user figcaption {
+  font-size: small;
+  position: relative;
+  left: 8px;
+}
+
+#content {
+    background-color: aqua;
+}
+
+#content .header {
+    background-color: white;
+    border-radius: 20px;
+    width: 1000px;
+    position: relative;
+    left: 30px;
+    height: 800px;
+}
+
+.header .background {
+  width: 750px;
+  height: 300px;
+  position: relative;
+}
+
+.header .profile {
+  position: absolute;
+  left: 40px;
+  top: 250px;
+  width: 50;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.header h1 {
+    position: relative;
+    left: 20px;
+    top: 30px
+}
+
+.header h4 {
+    position: relative;
+    left: 20px;
+    top: 10px
+}
