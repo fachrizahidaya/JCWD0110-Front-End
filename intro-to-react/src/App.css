@@ -1,0 +1,11 @@
+.App {
+  height: 300px;
+  width: 300px;
+  background-color: salmon;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  font-family: serif;
+  padding: 10px;
+  border: 10px double black;
+}
