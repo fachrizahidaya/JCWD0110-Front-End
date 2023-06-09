@@ -8,36 +8,18 @@ class LandingClass extends React.Component {
     number: 1,
   };
 
-  onChangeNumber = () => {
-    // metode untuk merubah state number
+ 
+
+  onChangeNumberPlus = () => {
     this.setState({ number: this.state.number + 1 });
   };
-
-  componentDidMount() {
-    console.log("did mount running");
-  }
-
-  componentDidUpdate() {
-    console.log("did update running");
-  }
-
-  componentWillUnmount() {
-    console.log("will unmount running");
-  }
 
   render() {
     return (
       <div>
-        {console.log("render running")}
-        <p>
-          State pengganti variable, ketika terjadi perubahan akan me-render
-          ulang
-        </p>
-        <div>
-          {this.state.number}
-          <button onClick={this.onChangeNumber}>+</button>
-          <Link to={"/test"}>Go to </Link>
-        </div>
+        <p>State sebagai pengganti variable di React</p>
+        <p>{this.state.number}</p>
+        <button onClick={this.onChangeNumberPlus}>+</button>
       </div>
     );
   }

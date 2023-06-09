@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         <Route path="/item" element={<Item />}></Route>
+        <Route path="/class" element={<LandingClass />}></Route>
       </Routes>
     </div>
   );
