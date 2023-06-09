@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export const Calculator = () => {
   const [num1, setNum1] = useState();
   const [num2, setNum2] = useState();
+  //   menggunakan useState()
 
   const handleOnChange1 = (element) => {
     setNum1(+element.target.value);
@@ -13,6 +14,7 @@ export const Calculator = () => {
   };
 
   const increment = () => {
+    // menggunakan DOM
     // let num1 = +document.getElementById("num-1").value;
     // let num2 = +document.getElementById("num-2").value;
     document.getElementById("result").textContent = num1 + num2;
