@@ -21,12 +21,14 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
+import { Route, Routes } from "react-router-dom";
+import SignupCard from "./pages/Form";
+import { ModalPage } from "./pages/ModalPage";
 
 function App() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box>
-      <Box>
+      <Box className="button">
         <Flex minWidth="max-content" alignItems="center" gap="2">
           <Box p="2">
             <Heading size="md">Chakra App</Heading>
@@ -38,7 +40,7 @@ function App() {
           </ButtonGroup>
         </Flex>
       </Box>
-      <Box bg="tomato" w="100%" p={4} color="white">
+      <Box className="contoh-text" bg="tomato" w="100%" p={4} color="white">
         <Text
           fontSize={"6xl"}
           fontFamily={"monospace"}
@@ -57,30 +59,20 @@ function App() {
           Button
         </Button>
       </Box>
-      <FormControl>
-        <FormLabel>Email address</FormLabel>
-        <Input w={"120px"} type="email" />
-        <FormHelperText>We'll never share your email.</FormHelperText>
-        <FormLabel>Password</FormLabel>
-        <Input w={"120px"} type="password" />
-        <FormHelperText>Password will be discreet.</FormHelperText>
-      </FormControl>
-      <Box>
-        <Button onClick={onOpen}>Open Modal</Button>
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalCloseButton />
-            <ModalBody>Hallo</ModalBody>
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
-                Close
-              </Button>
-              <Button variant="ghost">Secondary Action</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
+      <Box className="form">
+        <FormControl>
+          <FormLabel>Email address</FormLabel>
+          <Input name="username" w={"120px"} type="email" />
+          <FormHelperText>We'll never share your email.</FormHelperText>
+          <FormLabel>Password</FormLabel>
+          <Input w={"120px"} type="password" />
+          <FormHelperText>Password will be discreet.</FormHelperText>
+        </FormControl>
       </Box>
+      <Routes>
+        <Route path="/tes" element={<SignupCard />}></Route>
+        <Route path="/modal" element={<ModalPage />}></Route>
+      </Routes>
     </Box>
   );
 }
