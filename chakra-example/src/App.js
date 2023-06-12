@@ -2,78 +2,118 @@ import logo from "./logo.svg";
 import "./App.css";
 import {
   Box,
-  Button,
-  ButtonGroup,
-  Flex,
-  FormControl,
-  FormHelperText,
   FormLabel,
-  Heading,
   Input,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  Spacer,
-  Text,
+  InputRightElement,
+  InputGroup,
+  Button,
+  RadioGroup,
+  Stack,
+  Radio,
+  Heading,
+  Center,
   useDisclosure,
 } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 import SignupCard from "./pages/Form";
 import { ModalPage } from "./pages/ModalPage";
+import { Home } from "./pages/Home";
+import { Landing } from "./pages/Landing";
+import { useState } from "react";
+import { ModalResult } from "./components/ModalResult";
 
 function App() {
+  const [show, setShow] = useState(false);
+  const [value, setValue] = useState("Male");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [data, setData] = useState({});
+
+  const handleClick = () => setShow(!show);
+
+  const onSetData = (e) => {
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const onRegister = () => {
+    onOpen();
+  };
+
   return (
-    <Box>
-      <Box className="button">
-        <Flex minWidth="max-content" alignItems="center" gap="2">
-          <Box p="2">
-            <Heading size="md">Chakra App</Heading>
-          </Box>
-          <Spacer />
-          <ButtonGroup gap="2">
-            <Button colorScheme="blue">Register</Button>
-            <Button colorScheme="yellow">Sign in</Button>
-          </ButtonGroup>
-        </Flex>
+    <>
+      <Box
+        border={1}
+        borderStyle="solid"
+        borderColor="black"
+        w="30vw"
+        mx="auto"
+        mt="50"
+        p="7"
+        borderRadius={10}
+      >
+        <Heading as="h1" mb={5}>
+          Register
+        </Heading>
+        <FormLabel>Username</FormLabel>
+        <Input
+          type="text"
+          mb={5}
+          name="username"
+          onChange={(e) => onSetData(e)}
+        />
+        <FormLabel>Email</FormLabel>
+        <Input
+          type="email"
+          mb={5}
+          name="email"
+          onChange={(e) => onSetData(e)}
+        />
+        <FormLabel>Password</FormLabel>
+        <InputGroup size="md" mb={5}>
+          <Input
+            pr="4.5rem"
+            type={show ? "text" : "password"}
+            placeholder="Enter password"
+            name="password"
+            onChange={(e) => onSetData(e)}
+          />
+          <InputRightElement width="4.5rem">
+            <Button h="1.75rem" size="sm" onClick={handleClick}>
+              {show ? "Hide" : "Show"}
+            </Button>
+          </InputRightElement>
+        </InputGroup>
+
+        <FormLabel>Gender</FormLabel>
+        <RadioGroup onChange={setValue} value={value} name="gender">
+          <Stack direction="row">
+            <Radio value="Male">Male</Radio>
+            <Radio value="Female">Female</Radio>
+          </Stack>
+        </RadioGroup>
+
+        <Center mt={5}>
+          <Button colorScheme="cyan" mx="auto" onClick={onRegister}>
+            Register
+          </Button>
+        </Center>
       </Box>
-      <Box className="contoh-text" bg="tomato" w="100%" p={4} color="white">
-        <Text
-          fontSize={"6xl"}
-          fontFamily={"monospace"}
-          color={"tomato"}
-          as={""}
-        >
-          Hello world
-        </Text>
-        <Text fontSize={"sm"} fontFamily={"monospace"}>
-          Hello world
-        </Text>
-        <Text as="i" fontSize={"3xl"}>
-          Italic
-        </Text>
-        <Button colorScheme="red" variant="solid">
-          Button
-        </Button>
-      </Box>
-      <Box className="form">
-        <FormControl>
-          <FormLabel>Email address</FormLabel>
-          <Input name="username" w={"120px"} type="email" />
-          <FormHelperText>We'll never share your email.</FormHelperText>
-          <FormLabel>Password</FormLabel>
-          <Input w={"120px"} type="password" />
-          <FormHelperText>Password will be discreet.</FormHelperText>
-        </FormControl>
-      </Box>
+      <ModalResult
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        data={data}
+        gender={value}
+      />
       <Routes>
+        <Route path="/" element={<Landing />}></Route>
         <Route path="/tes" element={<SignupCard />}></Route>
         <Route path="/modal" element={<ModalPage />}></Route>
+        <Route path="/home" element={<Home />}></Route>
       </Routes>
-    </Box>
+    </>
   );
 }
 
