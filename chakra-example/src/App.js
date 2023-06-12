@@ -17,7 +17,6 @@ import {
 import { Route, Routes } from "react-router-dom";
 import SignupCard from "./pages/Form";
 import { ModalPage } from "./pages/ModalPage";
-import { Home } from "./pages/Home";
 import { Landing } from "./pages/Landing";
 import { useState } from "react";
 import { ModalResult } from "./components/ModalResult";
@@ -43,7 +42,7 @@ function App() {
 
   return (
     <>
-      <Box
+      {/* <Box
         border={1}
         borderStyle="solid"
         borderColor="black"
@@ -106,12 +105,11 @@ function App() {
         onClose={onClose}
         data={data}
         gender={value}
-      />
+      /> */}
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         <Route path="/tes" element={<SignupCard />}></Route>
         <Route path="/modal" element={<ModalPage />}></Route>
-        <Route path="/home" element={<Home />}></Route>
       </Routes>
     </>
   );

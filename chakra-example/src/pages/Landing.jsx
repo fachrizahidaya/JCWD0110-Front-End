@@ -31,11 +31,14 @@ export const Landing = () => {
           </Box>
           <Spacer />
           <ButtonGroup gap="2">
-            <Button colorScheme="blue">Register</Button>
-            <Button colorScheme="yellow">Sign in</Button>
+            <Button colorScheme="teal">Sign Up</Button>
+            <Button colorScheme="teal">Log in</Button>
           </ButtonGroup>
         </Flex>
       </Box>
+      <Button colorScheme="blue" variant="outline">
+        Button
+      </Button>
       <Box className="contoh-text" bg="tomato" w="100%" p={4} color="white">
         <Text
           fontSize={"6xl"}
@@ -58,11 +61,11 @@ export const Landing = () => {
       <Box className="form">
         <FormControl>
           <FormLabel>Email address</FormLabel>
-          <Input name="username" w={"120px"} type="email" />
+          <Input w={"120px"} type="email" />
           <FormHelperText>We'll never share your email.</FormHelperText>
           <FormLabel>Password</FormLabel>
           <Input w={"120px"} type="password" />
-          <FormHelperText>Password will be discreet.</FormHelperText>
+          <FormHelperText>We'll never share your password.</FormHelperText>
         </FormControl>
       </Box>
     </Box>
