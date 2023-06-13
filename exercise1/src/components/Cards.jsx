@@ -17,6 +17,7 @@ export const Cards = () => {
   const listName = [
     { name: "abdul", age: 23 },
     { name: "abdi", age: 18 },
+    { name: "saras", age: 20 },
   ];
   const [data, setData] = useState(listName);
 
