@@ -14,19 +14,20 @@ export const Filter = () => {
     "Persimmon",
   ];
   const [filterList, setFilterList] = useState(listFruits);
-  console.log(filterList);
 
   const handleFilter = (element) => {
     console.log(element.target.value);
+
     if (element.target.value === "") {
       return setFilterList(listFruits);
+    } else {
+      const filteredValue = listFruits.filter(
+        (item) =>
+          item.toLowerCase().indexOf(element.target.value.toLowerCase()) !== -1
+      );
+      setFilterList(filteredValue);
+      console.log(filteredValue);
     }
-    const filteredValues = listFruits.filter(
-      (item) =>
-        item.toLowerCase().indexOf(element.target.value.toLowerCase()) !== -1
-    );
-    setFilterList(filteredValues);
-    console.log(filteredValues);
   };
 
   return (
