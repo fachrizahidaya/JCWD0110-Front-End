@@ -6,6 +6,7 @@ import { useState } from "react";
 export const Stopwatch = () => {
   const [timer, setTimer] = useState(0);
   const [interv, setInterv] = useState();
+  console.log(timer);
 
   const onStart = () => {
     setInterv(
