@@ -1,14 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home";
-import { Todo } from "../../exercise/src/pages/Todo";
 
 function App() {
   return (
     <div className="App">
-      {/* <Home /> */}
+      <Home />
       <Routes>
-        <Route path="/todo" element={<Todo />}></Route>
+        <Route></Route>
       </Routes>
     </div>
   );
