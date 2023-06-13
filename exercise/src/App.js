@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Stopwatch } from "./pages/Stopwatch";
 import { Todo } from "./pages/Todo";
+import { Filter } from "./pages/Filter";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Stopwatch />}></Route>
         <Route path="/todo" element={<Todo />}></Route>
+        <Route path="/filter" element={<Filter />}></Route>
       </Routes>
     </div>
   );
