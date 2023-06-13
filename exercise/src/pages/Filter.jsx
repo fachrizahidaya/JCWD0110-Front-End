@@ -13,7 +13,22 @@ export const Filter = () => {
     "Strawberry",
     "Persimmon",
   ];
-  const [data, setData] = useState(listFruits);
+  const [filterList, setFilterList] = useState(listFruits);
+  console.log(filterList);
+
+  const handleFilter = (element) => {
+    console.log(element.target.value);
+    if (element.target.value === "") {
+      return setFilterList(listFruits);
+    }
+    const filteredValues = listFruits.filter(
+      (item) =>
+        item.toLowerCase().indexOf(element.target.value.toLowerCase()) !== -1
+    );
+    setFilterList(filteredValues);
+    console.log(filteredValues);
+  };
+
   return (
     <Box
       maxW={"500px"}
@@ -26,8 +41,16 @@ export const Filter = () => {
     >
       <Center>
         <Stack>
-          <Input textAlign={"center"} color={"white"} bgColor={"green"} w={"300px"} type="text" />
-          {data.map((item) => {
+          <Input
+            placeholder="Search here.."
+            textAlign={"center"}
+            color={"black"}
+            bgColor={"white"}
+            w={"300px"}
+            type="text"
+            onChange={(element) => handleFilter(element)}
+          />
+          {filterList.map((item) => {
             return (
               <Flex borderRadius={"5px"} justify={"center"} bg={"white"}>
                 {item}
