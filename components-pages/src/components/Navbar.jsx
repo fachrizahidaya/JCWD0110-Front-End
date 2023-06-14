@@ -26,7 +26,6 @@ export const Navbar = () => {
         <EditIcon />
         <ButtonGroup gap="2">
           <LoginButton />
-          <ModalLogin />
           <RegisterButton />
         </ButtonGroup>
       </Flex>
