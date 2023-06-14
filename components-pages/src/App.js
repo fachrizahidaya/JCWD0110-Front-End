@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         <Route path="/write" element={<CreateBlog />}></Route>
-        {/* <Route path="/register" element={<Register />}></Route> */}
+        <Route path="/register" element={<Register />}></Route>
       </Routes>
     </div>
   );
