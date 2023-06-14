@@ -12,10 +12,7 @@ import {
 import React from "react";
 
 export const Sidebar = ({ data }) => {
-  const favoritesList = [
-    { title: "Sepak Bola", desc: "Permainan antara 11 lawan 11" },
-    { title: "Satwa Indonesia", desc: "ragam fauna Indonesia" },
-  ];
+  
   return (
     <Box>
       <VStack divider={<StackDivider />} spacing={4} align="stretch">
