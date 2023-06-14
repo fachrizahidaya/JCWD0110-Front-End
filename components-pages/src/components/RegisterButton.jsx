@@ -13,6 +13,6 @@ export const RegisterButton = () => {
       onClick={toRegisterPage}
       colorScheme="teal"
       variant={"unstyled"}
-    ></Button>
+    >Register</Button>
   );
 };

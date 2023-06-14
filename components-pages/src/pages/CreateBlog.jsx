@@ -10,7 +10,6 @@ export const CreateBlog = () => {
         <NavbarCreate />
         <Flex mt={"30px"}>
           <Box w={"70%"}>
-            
           </Box>
           <Box w={"30%"}>
             Sidebar

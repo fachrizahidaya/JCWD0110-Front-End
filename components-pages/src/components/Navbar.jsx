@@ -13,8 +13,8 @@ import { SearchBar } from "./SearchBar";
 import { LoginButton } from "./LoginButton";
 import { RegisterButton } from "./RegisterButton";
 import { ModalLogin } from "./ModalLogin";
-import {useNavigate} from 'react-router-dom'
-import {Link} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -29,7 +29,6 @@ export const Navbar = () => {
         <ButtonGroup gap="2">
           <LoginButton />
           <RegisterButton />
-          <Link to={"/register"}>To Register</Link>
         </ButtonGroup>
       </Flex>
     </div>
