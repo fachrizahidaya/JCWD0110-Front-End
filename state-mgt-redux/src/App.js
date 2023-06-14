@@ -7,6 +7,10 @@ function App() {
     localStorage.setItem("username", "malik");
   };
 
+  const onAddSession = () => {
+    sessionStorage.setItem("username", "abdur");
+  };
+
   const onGet = () => {
     const key = document.getElementById("text").value;
     const value = localStorage.getItem(key);
@@ -28,6 +32,8 @@ function App() {
       <Text id="item"></Text>
       <Text>Ini button removeItem</Text>
       <Button onClick={onDelete}>Delete</Button>
+      <Text>Ini button setItem session storage</Text>
+      <Button onClick={onAddSession}>Add</Button>
     </div>
   );
 }
